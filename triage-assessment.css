@@ -9,12 +9,21 @@ body {
 }
 
 .form-container {
-    max-width: 600px;
+    max-width: 700px;
     background: rgba(255, 255, 255, 0.95);
     padding: 25px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     color: #333;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 48%;
 }
 
 .spinner {
