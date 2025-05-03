@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triage Assessment</title>
-    <link href="https://cdn.jsdelivr.net/npm/@angular/material@15.2.0/prebuilt-themes/indigo-pink.css" rel="stylesheet">
     <link rel="stylesheet" href="triage-assessment.css">
 </head>
 <body>
@@ -12,34 +11,39 @@
         <h1>Triage Assessment</h1>
         <form id="triageForm">
             <h2>General Information</h2>
-            <label>First Name *</label>
-            <input type="text" id="firstName" placeholder="Enter your first name" required>
+            <div class="row">
+                <div class="column">
+                    <label>First Name *</label>
+                    <input type="text" id="firstName" placeholder="Enter your first name" required>
 
-            <label>Last Name *</label>
-            <input type="text" id="lastName" placeholder="Enter your last name" required>
+                    <label>Email *</label>
+                    <input type="email" id="email" placeholder="Enter a valid email address" required>
 
-            <label>Email *</label>
-            <input type="email" id="email" placeholder="Enter a valid email address" required>
+                    <label>Date of Birth *</label>
+                    <input type="date" id="dateOfBirth" required>
 
-            <label>Phone *</label>
-            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    <label>Height *</label>
+                    <input type="text" id="height" placeholder="Enter your height (e.g., 5'10'')" required>
+                </div>
+                <div class="column">
+                    <label>Last Name *</label>
+                    <input type="text" id="lastName" placeholder="Enter your last name" required>
 
-            <label>Date of Birth *</label>
-            <input type="date" id="dateOfBirth" required>
+                    <label>Phone *</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
 
-            <label>Sex *</label>
-            <select id="sex" required>
-                <option value="" selected>-- Select --</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+                    <label>Sex *</label>
+                    <select id="sex" required>
+                        <option value="" selected>-- Select --</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
 
-            <label>Height *</label>
-            <input type="text" id="height" placeholder="Enter your height (e.g., 5'10'')" required>
-
-            <label>Weight *</label>
-            <input type="number" id="weight" placeholder="Enter your weight in lbs" required>
+                    <label>Weight *</label>
+                    <input type="number" id="weight" placeholder="Enter your weight in lbs" required>
+                </div>
+            </div>
 
             <label>Do you use nicotine? *</label>
             <select id="nicotineUse" required>
@@ -49,6 +53,7 @@
             </select>
 
             <h2>Spine & Pain Assessment</h2>
+            <img src="spine-assessment-image.jpg" alt="Spine & Pain Assessment Diagram">
             <label>Select the single area that hurts the most *</label>
             <select id="painArea" required>
                 <option value="" selected>-- Select --</option>
@@ -59,21 +64,6 @@
 
             <label>Pain Score (1-10) *</label>
             <input type="number" id="painScore" min="1" max="10" required>
-
-            <h2>Leg & Back Pain Assessment</h2>
-            <label>Do you have pain in your legs? *</label>
-            <select id="legPain" required>
-                <option value="" selected>-- Select --</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-
-            <label>Do you experience pain in over 50% of waking hours? *</label>
-            <select id="pain50PercentWakingHours" required>
-                <option value="" selected>-- Select --</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
 
             <h2>Medical History & Pain Management</h2>
             <label>Have you had imaging in the past 6 months? *</label>
