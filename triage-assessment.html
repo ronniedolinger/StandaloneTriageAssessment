@@ -11,34 +11,47 @@
     <div class="form-container">
         <h1>Triage Assessment</h1>
         <form id="triageForm">
-            <!-- General Information -->
             <h2>General Information</h2>
             <label>First Name *</label>
-            <input type="text" id="firstName" required>
+            <input type="text" id="firstName" placeholder="Enter your first name" required>
 
             <label>Last Name *</label>
-            <input type="text" id="lastName" required>
+            <input type="text" id="lastName" placeholder="Enter your last name" required>
 
             <label>Email *</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" placeholder="Enter a valid email address" required>
 
             <label>Phone *</label>
-            <input type="tel" id="phone" required>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
 
             <label>Date of Birth *</label>
             <input type="date" id="dateOfBirth" required>
 
             <label>Sex *</label>
             <select id="sex" required>
+                <option value="" selected>-- Select --</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
 
-            <!-- Spine & Pain Assessment -->
+            <label>Height *</label>
+            <input type="text" id="height" placeholder="Enter your height (e.g., 5'10'')" required>
+
+            <label>Weight *</label>
+            <input type="number" id="weight" placeholder="Enter your weight in lbs" required>
+
+            <label>Do you use nicotine? *</label>
+            <select id="nicotineUse" required>
+                <option value="" selected>-- Select --</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
             <h2>Spine & Pain Assessment</h2>
             <label>Select the single area that hurts the most *</label>
             <select id="painArea" required>
+                <option value="" selected>-- Select --</option>
                 <option value="cervical">Cervical - Neck and/or Arm(s)</option>
                 <option value="thoracic">Thoracic - Mid Back</option>
                 <option value="lumbar">Lumbar - Low Back and/or Leg(s)</option>
@@ -47,30 +60,32 @@
             <label>Pain Score (1-10) *</label>
             <input type="number" id="painScore" min="1" max="10" required>
 
-            <!-- Leg & Back Pain -->
             <h2>Leg & Back Pain Assessment</h2>
+            <label>Do you have pain in your legs? *</label>
+            <select id="legPain" required>
+                <option value="" selected>-- Select --</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
             <label>Do you experience pain in over 50% of waking hours? *</label>
             <select id="pain50PercentWakingHours" required>
+                <option value="" selected>-- Select --</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
 
-            <label>Were you employed before your pain started? *</label>
-            <select id="employedBeforePain" required>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-
-            <!-- Medical History -->
             <h2>Medical History & Pain Management</h2>
             <label>Have you had imaging in the past 6 months? *</label>
             <select id="imagingPast6Months" required>
+                <option value="" selected>-- Select --</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
 
             <label>Have you tried pain management? *</label>
             <select id="painManagement" required>
+                <option value="" selected>-- Select --</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
@@ -79,8 +94,8 @@
             <input type="checkbox" id="oral"> Oral Medication
             <input type="checkbox" id="injections"> Injection(s)
 
-            <!-- Submit Button -->
-            <button type="submit">Submit</button>
+            <button type="submit" id="submitButton">Submit</button>
+            <div id="loadingSpinner" class="spinner" style="display: none;"></div>
         </form>
     </div>
 
