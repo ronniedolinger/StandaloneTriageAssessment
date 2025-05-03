@@ -1,7 +1,7 @@
 document.getElementById("triageForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const formData = {
+        const formData = {
         firstName: document.getElementById("firstName").value,
         lastName: document.getElementById("lastName").value,
         email: document.getElementById("email").value,
@@ -13,14 +13,17 @@ document.getElementById("triageForm").addEventListener("submit", function(event)
         injections: document.getElementById("injections").checked ? "Yes" : "No"
     };
 
-    console.log("Submitting Data:", formData);
+     console.log("Submitting Data:", formData);
 
-    fetch("https://your-api-endpoint.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => alert("Form submitted successfully!"))
-    .catch(error => alert("Submission failed. Please try again."));
+    const submitButton = document.getElementById("submitButton");
+    const loadingSpinner = document.getElementById("loadingSpinner");
+
+    submitButton.disabled = true;
+    loadingSpinner.style.display = "block";
+
+    setTimeout(() => {
+        loadingSpinner.style.display = "none";
+        submitButton.disabled = false;
+        alert("Form submitted successfully!");
+    }, 2000); // Simulate processing delay
 });
