@@ -63,19 +63,29 @@
 
             <div id="cervicalPainSection" class="hidden">
                 <h2>Cervical Pain Assessment</h2>
-                <label for="armWeakness">Do you experience arm weakness?</label>
+                <label>Do you have shoulder, arm, or hand pain?</label>
                 <div class="radio-group">
-                    <input type="radio" id="armYes" name="armWeakness" value="yes"> <label for="armYes">Yes</label>
-                    <input type="radio" id="armNo" name="armWeakness" value="no"> <label for="armNo">No</label>
+                    <input type="radio" name="shoulderPain" value="yes"> <label>Yes</label>
+                    <input type="radio" name="shoulderPain" value="no"> <label>No</label>
+                </div>
+                <label>Is your arm pain worse than your neck pain?</label>
+                <div class="radio-group">
+                    <input type="radio" name="armPainWorse" value="yes"> <label>Yes</label>
+                    <input type="radio" name="armPainWorse" value="no"> <label>No</label>
                 </div>
             </div>
 
             <div id="legBackPainSection" class="hidden">
                 <h2>Leg & Back Pain Assessment</h2>
-                <label for="legPain">Do you have pain in your legs? *</label>
+                <label>Do you have pain in your legs?</label>
                 <div class="radio-group">
-                    <input type="radio" id="legYes" name="legPain" value="yes"> <label for="legYes">Yes</label>
-                    <input type="radio" id="legNo" name="legPain" value="no"> <label for="legNo">No</label>
+                    <input type="radio" name="legPain" value="yes"> <label>Yes</label>
+                    <input type="radio" name="legPain" value="no"> <label>No</label>
+                </div>
+                <label>Is your leg pain worse than your back pain?</label>
+                <div class="radio-group">
+                    <input type="radio" name="legPainWorse" value="yes"> <label>Yes</label>
+                    <input type="radio" name="legPainWorse" value="no"> <label>No</label>
                 </div>
             </div>
 
