@@ -16,8 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (selectedPainArea === "cervical") {
             cervicalPainSection.style.display = "block";
+            legBackPainSection.style.display = "none";
         } else if (selectedPainArea === "lumbar" || selectedPainArea === "thoracic") {
             legBackPainSection.style.display = "block";
+            cervicalPainSection.style.display = "none";
         }
     }
 
