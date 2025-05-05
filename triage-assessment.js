@@ -1,24 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const painArea = document.getElementById("painArea");
+    const cervicalPainSection = document.getElementById("cervicalPainSection");
+    const legBackPainSection = document.getElementById("legBackPainSection");
+
+    // Ensure elements exist before modifying
+    if (!painArea || !cervicalPainSection || !legBackPainSection) {
+        console.error("Error: One or more required elements are missing.");
+        return;
+    }
+
     function togglePainSections() {
-        const painArea = document.getElementById("painArea").value;
-        const cervicalPainSection = document.getElementById("cervicalPainSection");
-        const legBackPainSection = document.getElementById("legBackPainSection");
+        const selectedPainArea = painArea.value;
 
-        // Hide both sections initially
-        cervicalPainSection.classList.add("hidden");
-        legBackPainSection.classList.add("hidden");
+        // Hide all sections initially
+        cervicalPainSection.style.display = "none";
+        legBackPainSection.style.display = "none";
 
-        // Show the appropriate section based on selection
-        if (painArea === "cervical") {
-            cervicalPainSection.classList.remove("hidden");
+        // Show the correct section based on selection
+        if (selectedPainArea === "cervical") {
+            cervicalPainSection.style.display = "block";
             cervicalPainSection.classList.add("fade-in");
-        } else if (painArea === "lumbar" || painArea === "thoracic") {
-            legBackPainSection.classList.remove("hidden");
+        } else if (selectedPainArea === "lumbar" || selectedPainArea === "thoracic") {
+            legBackPainSection.style.display = "block";
             legBackPainSection.classList.add("fade-in");
         }
     }
 
-    document.getElementById("painArea").addEventListener("change", togglePainSections);
+    painArea.addEventListener("change", togglePainSections);
 
     // Validate Date of Birth format (MM/DD/YYYY)
     document.getElementById("dateOfBirth").addEventListener("input", function () {
