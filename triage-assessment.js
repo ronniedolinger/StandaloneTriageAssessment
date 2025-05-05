@@ -13,6 +13,8 @@ document.getElementById("triageForm").addEventListener("submit", function(event)
         injections: document.getElementById("injections").checked ? "Yes" : "No"
     };
 
+    
+
      console.log("Submitting Data:", formData);
 
     const submitButton = document.getElementById("submitButton");
@@ -20,6 +22,18 @@ document.getElementById("triageForm").addEventListener("submit", function(event)
 
     submitButton.disabled = true;
     loadingSpinner.style.display = "block";
+
+    function togglePainSections() {
+    const painArea = document.getElementById("painArea").value;
+    const cervicalPainSection = document.getElementById("cervicalPainSection");
+    const legBackPainSection = document.getElementById("legBackPainSection");
+    const medicalHistorySection = document.getElementById("medicalHistorySection");
+
+    cervicalPainSection.style.display = painArea === "cervical" ? "block" : "none";
+    legBackPainSection.style.display = (painArea === "thoracic" || painArea === "lumbar") ? "block" : "none";
+    medicalHistorySection.style.display = painArea ? "block" : "none";
+}
+
 
     setTimeout(() => {
         loadingSpinner.style.display = "none";
