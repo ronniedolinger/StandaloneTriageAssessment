@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     function togglePainSections() {
-        const painArea = document.querySelector('input[name="painArea"]:checked')?.value;
+        const painArea = document.getElementById("painArea").value;
         const cervicalPainSection = document.getElementById("cervicalPainSection");
         const legBackPainSection = document.getElementById("legBackPainSection");
 
@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    document.querySelectorAll('input[name="painArea"]').forEach(radio => {
-        radio.addEventListener("change", togglePainSections);
-    });
+    document.getElementById("painArea").addEventListener("change", togglePainSections);
 
     document.getElementById("dateOfBirth").addEventListener("input", function () {
         const dob = this.value;
