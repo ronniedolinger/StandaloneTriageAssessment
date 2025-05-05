@@ -41,7 +41,7 @@
             <h2>Spine & Pain Assessment</h2>
             <img src="spine-assessment-image.jpg" alt="Spine & Pain Assessment Diagram">
             <label>Select the single area that hurts the most *</label>
-            <select id="painArea" required>
+            <select id="painArea" required onchange="togglePainSections()">
                 <option value="" selected>-- Select --</option>
                 <option value="cervical">Cervical - Neck and/or Arm(s)</option>
                 <option value="thoracic">Thoracic - Mid Back</option>
@@ -49,57 +49,38 @@
             </select>
             <label>Pain Score (1-10) *</label> <input type="number" id="painScore" min="1" max="10" required>
 
-            <h2>Leg & Back Pain Assessment</h2>
-            <div class="row">
-                <div class="column">
-                    <label>Do you have pain in your legs? *</label>
-                    <select id="legPain" required>
-                        <option value="" selected>-- Select --</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                    
-                    <label>Were you employed before your pain started? *</label>
-                    <select id="employedBeforePain" required>
-                        <option value="" selected>-- Select --</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-                <div class="column">
-                    <label>Is your leg pain worsening? *</label>
-                    <select id="legPainWorsening" required>
-                        <option value="" selected>-- Select --</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-
-                    <label>Is your back or neck pain worsening? *</label>
-                    <select id="backPainWorsening" required>
-                        <option value="" selected>-- Select --</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
+            <div id="cervicalPainSection" class="hidden">
+                <h2>Cervical Pain Assessment</h2>
+                <label>Do you experience arm weakness?</label> 
+                <select id="armWeakness">
+                    <option value="" selected>-- Select --</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
             </div>
 
-            <h2>Medical History & Pain Management</h2>
-            <label>Have you had imaging in the past 6 months? *</label>
-            <select id="imagingPast6Months" required>
-                <option value="" selected>-- Select --</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
+            <div id="legBackPainSection" class="hidden">
+                <h2>Leg & Back Pain Assessment</h2>
+                <label>Do you have pain in your legs? *</label>
+                <select id="legPain" required>
+                    <option value="" selected>-- Select --</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
 
-            <label>Have you tried pain management? *</label>
-            <select id="painManagement" required>
-                <option value="" selected>-- Select --</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
+            <div id="medicalHistorySection" class="hidden">
+                <h2>Medical History & Pain Management</h2>
+                <label>Have you had imaging in the past 6 months? *</label>
+                <select id="imagingPast6Months" required>
+                    <option value="" selected>-- Select --</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
 
             <button type="submit" id="submitButton">Submit</button>
-            <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+            <div id="loadingSpinner" class="spinner hidden"></div>
         </form>
     </div>
 
