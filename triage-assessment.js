@@ -3,18 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const painArea = document.querySelector('input[name="painArea"]:checked')?.value;
         const cervicalPainSection = document.getElementById("cervicalPainSection");
         const legBackPainSection = document.getElementById("legBackPainSection");
-        const medicalHistorySection = document.getElementById("medicalHistorySection");
 
         cervicalPainSection.classList.add("hidden");
         legBackPainSection.classList.add("hidden");
-        medicalHistorySection.classList.add("hidden");
 
         if (painArea === "cervical") {
             cervicalPainSection.classList.remove("hidden");
-            medicalHistorySection.classList.remove("hidden");
         } else if (painArea === "thoracic" || painArea === "lumbar") {
             legBackPainSection.classList.remove("hidden");
-            medicalHistorySection.classList.remove("hidden");
         }
     }
 
@@ -30,21 +26,5 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             this.setCustomValidity("");
         }
-    });
-
-    document.getElementById("triageForm").addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const submitButton = document.getElementById("submitButton");
-        const loadingSpinner = document.getElementById("loadingSpinner");
-
-        submitButton.disabled = true;
-        loadingSpinner.classList.remove("hidden");
-
-        setTimeout(() => {
-            loadingSpinner.classList.add("hidden");
-            submitButton.disabled = false;
-            alert("Form submitted successfully!");
-        }, 2000);
     });
 });
