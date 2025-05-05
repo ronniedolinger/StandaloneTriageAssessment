@@ -1,29 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // function togglePainSections() {
-    //     const painArea = document.getElementById("painArea").value;
-    //     const cervicalPainSection = document.getElementById("cervicalPainSection");
-    //     const legBackPainSection = document.getElementById("legBackPainSection");
-
-    //     cervicalPainSection.classList.add("hidden");
-    //     legBackPainSection.classList.add("hidden");
-
-    //     if (painArea === "cervical") {
-    //         cervicalPainSection.classList.remove("hidden");
-    //     } else if (painArea === "thoracic" || painArea === "lumbar") {
-    //         legBackPainSection.classList.remove("hidden");
-    //     }
-    // }
-
-        function togglePainSections() {
+    function togglePainSections() {
         const painArea = document.getElementById("painArea").value;
-        document.getElementById("cervicalPainSection").classList.toggle("hidden", painArea !== "cervical");
+        const cervicalPainSection = document.getElementById("cervicalPainSection");
+        const legBackPainSection = document.getElementById("legBackPainSection");
+
+        // Hide all sections initially
+        cervicalPainSection.classList.add("hidden");
+        legBackPainSection.classList.add("hidden");
+
+        // Show the correct section based on selection
+        if (painArea === "cervical") {
+            cervicalPainSection.classList.remove("hidden");
+            cervicalPainSection.classList.add("fade-in");
+        } else if (painArea === "lumbar" || painArea === "thoracic") {
+            legBackPainSection.classList.remove("hidden");
+            legBackPainSection.classList.add("fade-in");
+        }
     }
 
     document.getElementById("painArea").addEventListener("change", togglePainSections);
 });
 
-
-    document.getElementById("painArea").addEventListener("change", togglePainSections);
 
     document.getElementById("dateOfBirth").addEventListener("input", function () {
         const dob = this.value;
