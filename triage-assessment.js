@@ -22,13 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-    document.getElementById("dateOfBirth").addEventListener("input", function () {
-        const dob = this.value;
-        const pattern = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d\d$/;
-        if (!pattern.test(dob)) {
-            this.setCustomValidity("Please enter a valid date in MM/DD/YYYY format.");
-        } else {
-            this.setCustomValidity("");
-        }
-    });
+document.getElementById("dateOfBirth").addEventListener("input", function () {
+    const dob = this.value;
+    const pattern = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d\d$/;
+    if (!pattern.test(dob)) {
+        this.setCustomValidity("Please enter a valid date in MM/DD/YYYY format.");
+    } else {
+        this.setCustomValidity("");
+    }
 });
