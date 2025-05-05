@@ -53,12 +53,13 @@
             </div>
 
             <h2>Spine & Pain Assessment</h2>
-            <label>Select the single area that hurts the most *</label>
-            <div class="radio-group">
-                <input type="radio" id="cervical" name="painArea" value="cervical" onclick="togglePainSections()"> <label for="cervical">Cervical - Neck and/or Arm(s)</label>
-                <input type="radio" id="thoracic" name="painArea" value="thoracic" onclick="togglePainSections()"> <label for="thoracic">Thoracic - Mid Back</label>
-                <input type="radio" id="lumbar" name="painArea" value="lumbar" onclick="togglePainSections()"> <label for="lumbar">Lumbar - Low Back and/or Leg(s)</label>
-            </div>
+            <label for="painArea">Select the single area that hurts the most *</label>
+            <select id="painArea" required onchange="togglePainSections()">
+                <option value="" selected>-- Select --</option>
+                <option value="cervical">Cervical - Neck and/or Arm(s)</option>
+                <option value="thoracic">Thoracic - Mid Back</option>
+                <option value="lumbar">Lumbar - Low Back and/or Leg(s)</option>
+            </select>
 
             <div id="cervicalPainSection" class="hidden">
                 <h2>Cervical Pain Assessment</h2>
@@ -66,11 +67,6 @@
                 <div class="radio-group">
                     <input type="radio" id="armYes" name="armWeakness" value="yes"> <label for="armYes">Yes</label>
                     <input type="radio" id="armNo" name="armWeakness" value="no"> <label for="armNo">No</label>
-                </div>
-                <label for="neckStiffness">Do you experience neck stiffness?</label>
-                <div class="radio-group">
-                    <input type="radio" id="neckYes" name="neckStiffness" value="yes"> <label for="neckYes">Yes</label>
-                    <input type="radio" id="neckNo" name="neckStiffness" value="no"> <label for="neckNo">No</label>
                 </div>
             </div>
 
