@@ -43,12 +43,17 @@ input, select {
 .radio-group {
     display: flex;
     align-items: center;
-    gap: 5px; /* Reduced gap for closer spacing */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 4px; /* Moves radio button closer to label */
 }
 
 .radio-group label {
-    margin-left: 4px; /* Ensures labels are closer to the radio buttons */
+    display: inline-block;
+    margin-left: 0; /* Ensures label is immediately next to radio button */
 }
+
 
 
 /* Hidden Sections */
