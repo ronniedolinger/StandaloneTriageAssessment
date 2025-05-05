@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const cervicalPainSection = document.getElementById("cervicalPainSection");
     const legBackPainSection = document.getElementById("legBackPainSection");
 
-    // Ensure elements exist before modifying
     if (!painArea || !cervicalPainSection || !legBackPainSection) {
         console.error("Error: One or more required elements are missing.");
         return;
@@ -12,21 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function togglePainSections() {
         const selectedPainArea = painArea.value;
 
-        // Hide all sections initially
         cervicalPainSection.style.display = "none";
         legBackPainSection.style.display = "none";
 
-        // Show the correct section based on selection
         if (selectedPainArea === "cervical") {
             cervicalPainSection.style.display = "block";
-            cervicalPainSection.classList.add("fade-in");
         } else if (selectedPainArea === "lumbar" || selectedPainArea === "thoracic") {
             legBackPainSection.style.display = "block";
-            legBackPainSection.classList.add("fade-in");
         }
     }
 
     painArea.addEventListener("change", togglePainSections);
+    togglePainSections();
 
     // Validate Date of Birth format (MM/DD/YYYY)
     document.getElementById("dateOfBirth").addEventListener("input", function () {
