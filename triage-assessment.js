@@ -1,18 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function togglePainSections() {
+    // function togglePainSections() {
+    //     const painArea = document.getElementById("painArea").value;
+    //     const cervicalPainSection = document.getElementById("cervicalPainSection");
+    //     const legBackPainSection = document.getElementById("legBackPainSection");
+
+    //     cervicalPainSection.classList.add("hidden");
+    //     legBackPainSection.classList.add("hidden");
+
+    //     if (painArea === "cervical") {
+    //         cervicalPainSection.classList.remove("hidden");
+    //     } else if (painArea === "thoracic" || painArea === "lumbar") {
+    //         legBackPainSection.classList.remove("hidden");
+    //     }
+    // }
+
+        function togglePainSections() {
         const painArea = document.getElementById("painArea").value;
-        const cervicalPainSection = document.getElementById("cervicalPainSection");
-        const legBackPainSection = document.getElementById("legBackPainSection");
-
-        cervicalPainSection.classList.add("hidden");
-        legBackPainSection.classList.add("hidden");
-
-        if (painArea === "cervical") {
-            cervicalPainSection.classList.remove("hidden");
-        } else if (painArea === "thoracic" || painArea === "lumbar") {
-            legBackPainSection.classList.remove("hidden");
-        }
+        document.getElementById("cervicalPainSection").classList.toggle("hidden", painArea !== "cervical");
     }
+
+    document.getElementById("painArea").addEventListener("change", togglePainSections);
+});
+
 
     document.getElementById("painArea").addEventListener("change", togglePainSections);
 
