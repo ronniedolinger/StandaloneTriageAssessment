@@ -23,7 +23,7 @@ document.getElementById("triageForm").addEventListener("submit", function(event)
     submitButton.disabled = true;
     loadingSpinner.style.display = "block";
 
-    function togglePainSections() {
+function togglePainSections() {
     const painArea = document.getElementById("painArea").value;
     const cervicalPainSection = document.getElementById("cervicalPainSection");
     const legBackPainSection = document.getElementById("legBackPainSection");
@@ -33,6 +33,17 @@ document.getElementById("triageForm").addEventListener("submit", function(event)
     legBackPainSection.style.display = (painArea === "thoracic" || painArea === "lumbar") ? "block" : "none";
     medicalHistorySection.style.display = painArea ? "block" : "none";
 }
+
+// Date Validation for MM/DD/YYYY format
+document.getElementById("dateOfBirth").addEventListener("input", function() {
+    const dob = this.value;
+    const pattern = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d\d$/;
+    if (!pattern.test(dob)) {
+        this.setCustomValidity("Please enter a valid date in MM/DD/YYYY format.");
+    } else {
+        this.setCustomValidity("");
+    }
+});
 
 
     setTimeout(() => {
