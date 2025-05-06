@@ -43,11 +43,11 @@ input, select {
 .radio-group {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 3px;
 }
 
 .radio-group input[type="radio"] {
-    margin-right: 3px; /* Moves radio button closer to label */
+    margin-right: 5px; /* Moves radio button closer to label */
 }
 
 .radio-group label {
