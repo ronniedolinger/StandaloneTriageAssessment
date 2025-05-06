@@ -13,7 +13,7 @@ body {
 .form-container {
     max-width: 700px;
     background: rgba(255, 255, 255, 0.95);
-    padding: 25px;
+/*     padding: 25px; */
     border-radius: 10px;
     color: #333;
 }
@@ -43,11 +43,11 @@ input, select {
 .radio-group {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
 }
 
 .radio-group input[type="radio"] {
-    margin-left: 2px; /* Moves radio button closer to label */
+    margin-right: 3px; /* Moves radio button closer to label */
 }
 
 .radio-group label {
