@@ -40,15 +40,15 @@ body {
 }
 
  /* Radio Button Group */
-/*.radio-group {
+/* .radio-group {
     display: flex;
     align-items: center;
     gap: 3px;
-}
+} */
 
 .radio-group input[type="radio"] {
     margin-right: 5px; /* Moves radio button closer to label */
-/* }* */
+ }
 
 .radio-group label {
     display: inline-block;
