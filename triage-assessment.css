@@ -47,7 +47,7 @@ input, select {
 }
 
 .radio-group input[type="radio"] {
-    margin-right: 4px; /* Moves radio button closer to label */
+    margin-left: 2px; /* Moves radio button closer to label */
 }
 
 .radio-group label {
