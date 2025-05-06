@@ -26,12 +26,12 @@ body {
 /* } */
 
 /* Input Fields */
-/*  input, select {
+ input, select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px; 
-} */
+}
 
 /* Height Input Group */
 .height-group {
