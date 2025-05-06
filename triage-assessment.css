@@ -19,14 +19,14 @@ body {
 }
 
 /* Form Labels */
- label {
+/*  label { */
 /*     font-weight: bold; */
 /*     display: block; */
-    margin-bottom: 5px;
-}
+/*     margin-bottom: 5px; */
+/* } */
 
 /* Input Fields */
-/* input, select {
+ input, select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -34,10 +34,10 @@ body {
 }
 
 /* Height Input Group */
-/* .height-group {
+.height-group {
     display: flex;
     gap: 10px;
-} */
+}
 
  /* Radio Button Group */
 /*.radio-group {
