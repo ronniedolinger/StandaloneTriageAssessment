@@ -42,19 +42,19 @@ body {
  /* Radio Button Group */
 .radio-group {
     display: flex;
-/*     align-items: center; */
+    align-items: center;
     gap: 3px;
 }
 
 /* .radio-group input[type="radio"] {
     margin-right: 5px; /* Moves radio button closer to label */
- } */
+/*  }  */
 
-.radio-group label {
+/* .radio-group label {
     font-weight: bold; 
     display: inline-block;
     margin-left: 0; /* Ensures label is immediately next to radio button */
- } 
+/*  }  */ 
 
 
 
