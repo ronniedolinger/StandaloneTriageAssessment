@@ -19,28 +19,28 @@ body {
 }
 
 /* Form Labels */
-label {
+/* label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
 /* Input Fields */
-input, select {
+/* input, select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
 
 /* Height Input Group */
-.height-group {
+/* .height-group {
     display: flex;
     gap: 10px;
-}
+} */
 
-/* Radio Button Group */
-.radio-group {
+ /* Radio Button Group */
+/*.radio-group {
     display: flex;
     align-items: center;
     gap: 3px;
@@ -48,12 +48,12 @@ input, select {
 
 .radio-group input[type="radio"] {
     margin-right: 5px; /* Moves radio button closer to label */
-}
+/* }* */
 
-.radio-group label {
+/* .radio-group label {
     display: inline-block;
     margin-left: 0; /* Ensures label is immediately next to radio button */
-}
+/* } */ 
 
 
 
