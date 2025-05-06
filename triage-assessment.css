@@ -43,6 +43,7 @@ input, select {
 .radio-group {
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .radio-group input[type="radio"] {
