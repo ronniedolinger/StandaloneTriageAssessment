@@ -13,7 +13,7 @@ body {
 .form-container {
     max-width: 700px;
     background: rgba(255, 255, 255, 0.95);
-/*     padding: 25px; */
+    padding: 25px;
     border-radius: 10px;
     color: #333;
 }
